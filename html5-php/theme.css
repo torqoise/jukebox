@@ -1,0 +1,106 @@
+/* Customise default stylesheet */
+
+body {
+	margin: 0;                        /* WHY DOES IT HAVE AN 8PX MARGIN BY DEFAULT!!! */
+	font-family: 'Cabin', sans-serif; /* Change the font to a nicer one */
+}
+
+a {
+	color: rgb(33,33,99);                  /* Changing the color from #0000FF to a nice blue */
+	text-decoration: none;                 /* Disable the HORRENDOUS underline */
+	border-bottom: 1px white solid;        /* And use a borderline instead (when hovered) */
+	transition: color 0.25s, border 0.25s; /* Some transitions because we are no longer in the 2000s */
+}
+
+a:hover {
+	color: inherit;                 /* Set the text colour to the color of it's parents */ 
+	border-bottom: 1px black solid; /* Same thing, kinda */
+}
+
+table {
+    width: 100%; /* I don't recall any time when a table took only a small space of the screen/paper */
+}
+
+th {
+    height: 50px; /* Height - because... */
+}
+
+/* Jukebox graphic */
+
+.jukebox {
+	background: black;  /* Black seems more professional */
+	color: white;       /* So you can see the text */
+	text-align: center; /* Why would I not center the jukebox? */
+	width: 100%;        /* To make it look properly */
+	padding: 10px 0;    /* A bit of padding doesn't hurt. I actually makes it look better */
+}
+
+.jukebox a {
+	border: none; /* Get rid of the ugly line underneath */
+}
+
+.grey {
+	/* To make the jukebox grey when not in use */
+	-webkit-filter: grayscale(1);
+    filter: gray;
+    filter: grayscale(1);
+}
+
+/* Jukebox Control Bar */
+
+.jukeboxctl {
+	background: rgb(22,22,22); /* A dark grey */
+	text-align: center;        /* I'm not going to rely on widfix for this. It's self explanatory */
+}
+
+.jukeboxctl a {
+	display: inline-block;                     /* Easier to manage */
+	border: none;                              /* Get rid of the ugly white line */
+	color: white;                              /* We don't want out text to be blue, do we? */
+	padding: 10px;	                           /* Bit of padding is better than nothing */
+	transition: color 0.25s, background 0.25s; /* What did I say about the 2000s? */
+}
+
+.jukeboxctl a:hover {
+	background: white; /* Reverse the colour scheme */
+	color: black;
+}
+
+/* An attempt at making a separator, but it didn't work
+.jukeboxctl .separator {
+	display: inline-block;
+	height: 30px;
+	width: 1px;
+	background: white;
+} */
+
+/* Music list */
+
+#musiclist {
+	background: white;   /* Easy legibility. */
+	color: black;
+	padding-bottom: 1px; /* Margins look horrible by default */
+}
+
+#musiclist .header {
+	background: lightgray; /* A light grey for the header. No drama */
+	font-size: 1.25em;     /* Larger text, but not as big as <h1> */
+	padding: 10px;
+}
+
+.widfix {
+	min-width: 300px;   /* The reason I pick 300px is because 300px + 10px * 2 = 320px */
+	width: 45%;         /* Larger screens will have a larger width */
+	margin-left: auto;  /* Make it centered */
+	margin-right: auto;
+}
+
+/* Toggle view of the browser's audio bar */
+
+#jukeboxEngine {
+	display: none; /* Hide it */
+}
+
+#jukeboxEngine:target {
+	display: inline-block; /* When active, show it */
+}

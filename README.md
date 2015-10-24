@@ -24,3 +24,7 @@ Less important feature wishlist
 
 ## Requirements
 A Web Server with PHP 5 support, read/write access to the folder that you want to store the program, and having sure that uploading files is enabled in `php.ini`.
+
+## Acknowledgements
+* [ClkerFreeVectorImages - Jukebox SVG Graphic](https://pixabay.com/ro/jukebox-muzica-albastru-roz-311220/)
+* [Tala Ter - Annyang! Voice Recognition](https://www.talater.com/annyang/)
